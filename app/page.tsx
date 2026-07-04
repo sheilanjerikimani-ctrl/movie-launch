@@ -1,65 +1,28 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main>
+      <section className="relative h-[90vh] flex items-center justify-center text-center overflow-hidden bg-black">
+        <div className="hero-photo" style={{ backgroundImage: "url(/hero.jpg)" }} />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/70 to-black" />
+        <div className="spotlight-glow" />
+        <div className="relative z-10 px-6">
+          <p className="uppercase tracking-[0.4em] text-red-500 text-sm mb-4 fade-in-1">The night belongs to film</p>
+          <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6 fade-in-2">Every film deserves<br />a night to remember.</h1>
+          <p className="text-white/70 max-w-xl mx-auto mb-8 fade-in-3">Movix Night designs and stages theatrical launches - red carpets, teaser drops, and the countdown that turns a release date into an event.</p>
+          <a href="/launches" className="inline-block bg-red-600 hover:bg-red-700 transition px-8 py-3 uppercase tracking-wider text-sm font-semibold fade-in-4">See Upcoming Launches</a>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+        <style>{`
+          .hero-photo{position:absolute;inset:0;background-size:cover;background-position:center;animation:kenBurns 20s ease-in-out infinite alternate}
+          @keyframes kenBurns{0%{transform:scale(1)}100%{transform:scale(1.12)}}
+          .spotlight-glow{position:absolute;inset:0;background:radial-gradient(ellipse 55% 45% at 25% -5%,rgba(220,38,38,0.25),transparent 60%),radial-gradient(ellipse 55% 45% at 75% -5%,rgba(220,38,38,0.25),transparent 60%),radial-gradient(ellipse 70% 55% at 50% 105%,rgba(127,29,29,0.4),transparent 70%);animation:glowPulse 6s ease-in-out infinite}
+          @keyframes glowPulse{0%,100%{opacity:0.85}50%{opacity:1}}
+          .fade-in-1{opacity:0;animation:fadeUp 0.9s ease-out 0.1s forwards}
+          .fade-in-2{opacity:0;animation:fadeUp 0.9s ease-out 0.3s forwards}
+          .fade-in-3{opacity:0;animation:fadeUp 0.9s ease-out 0.5s forwards}
+          .fade-in-4{opacity:0;animation:fadeUp 0.9s ease-out 0.7s forwards}
+          @keyframes fadeUp{0%{opacity:0;transform:translateY(20px)}100%{opacity:1;transform:translateY(0)}}
+        `}</style>
+      </section>
+    </main>
   );
 }
