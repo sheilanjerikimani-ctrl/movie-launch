@@ -2,6 +2,10 @@
 
 A fictional movie-launch studio website built for the RedGiant technical assessment.
 
+## Live Demo
+- **Website:** https://movie-launch-one.vercel.app
+- **API:** https://movie-launch-api-production.up.railway.app/api/films
+
 ## Stack
 - Frontend: Next.js (App Router) + Tailwind CSS — this repo
 - Backend: Laravel API (SQLite) — https://github.com/sheilanjerikimani-ctrl/movie-launch-api
