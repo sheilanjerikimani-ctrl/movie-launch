@@ -18,13 +18,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <a href="/contact" className="hover:text-red-500 transition">Stay in the Loop</a>
           </div>
         </nav>
-        <div className="fixed-bg-photo" style={{ backgroundImage: "url(/hero.jpg)" }} />
+        <div className="fixed-bg-photo" />
         <div className="fixed-bg-overlay" />
-        {children}
+        <div style={{ position: "relative", zIndex: 10 }}>{children}</div>
         <footer className="px-8 py-10 border-t border-white/10 mt-20 text-white/40 text-sm relative z-10">© 2026 Movix Night. Every premiere is a promise.</footer>
         <style>{`
-          .fixed-bg-photo{position:fixed;inset:0;background-size:cover;background-position:center;z-index:-2;opacity:0.3}
-          .fixed-bg-overlay{position:fixed;inset:0;background:#000000;z-index:-1;opacity:0.75}
+          .fixed-bg-photo{position:fixed;top:0;left:0;width:100%;height:100%;background-image:url(/hero.jpg);background-size:cover;background-position:center;z-index:0;opacity:0.35}
+          .fixed-bg-overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:#000000;z-index:1;opacity:0.6}
         `}</style>
       </body>
     </html>
