@@ -23,7 +23,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <div className="page-bg-overlay" />
           <div className="relative z-10">{children}</div>
         </div>
-        <footer className="px-8 py-10 border-t border-white/10 text-white/40 text-sm relative z-10">© 2026 Movix Night. Every premiere is a promise.</oa�ter>
+        <footer className="px-8 py-10 border-t border-white/10 text-white/40 text-sm relative z-10">© 2026 Movix Night. Every premiere is a promise.</footer>
         <style>{`
           .page-bg{position:relative;min-height:60vh}
           .page-bg-photo{position:fixed;inset:0;background-size:cover;background-position:center;z-index:0;opacity:0.25}
