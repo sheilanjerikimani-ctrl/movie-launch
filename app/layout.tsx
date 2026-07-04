@@ -23,8 +23,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {children}
         <footer className="px-8 py-10 border-t border-white/10 mt-20 text-white/40 text-sm relative z-10">© 2026 Movix Night. Every premiere is a promise.</footer>
         <style>{`
-          .fixed-bg-photo{position:fixed;inset:0;background-size:cover;background-position:center;z-index:-2;opacity:0.15}
-          .fixed-bg-overlay{position:fixed;inset:0;background:#000000;z-index:-1;opacity:0.9}
+          .fixed-bg-photo{position:fixed;inset:0;background-size:cover;background-position:center;z-index:-2;opacity:0.3}
+          .fixed-bg-overlay{position:fixed;inset:0;background:#000000;z-index:-1;opacity:0.75}
         `}</style>
       </body>
     </html>
